@@ -184,7 +184,7 @@ somaHeroFunction(5, 5, 2)
 
 //4.
 document.write(`<h3>Total de Cliques:</h3>`)
-document.write(`<button onclick="contarCliquesTr(); contarCliquesHeroFunction()">Clique aqui!</button>
+document.write(`<button onclick="contarCliques(); contarCliquesHeroFunction()">Clique aqui!</button>
 <div id="resultado"></div><div id="resultadoHeroFunction"></div>`)
 
 let totalCliques = 0;
