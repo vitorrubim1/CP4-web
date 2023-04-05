@@ -1,4 +1,3 @@
-// 1.
 const alunos = [
     {
         nome: "Vitor", 
@@ -22,9 +21,8 @@ const escola = {
     periodo: "Noite",
 }
 
-// a. Crie um método telaaluno estudando e apresente na tela
+// a.
 const alunosEstudando = escola.alunos.filter(item => item.estudando);
-
 /*
     Output: [
         {
@@ -40,7 +38,6 @@ const alunosEstudando = escola.alunos.filter(item => item.estudando);
 
 // b. 
 const aluno = alunos.find(item => item.nome === "Vitor");
-
 /*
     Output: {
         "nome": "Vitor",
@@ -84,7 +81,6 @@ const funcionarios = [
 
 // a.
 const admitidos = funcionarios.filter(item => item.dataAdmissao.getFullYear() >= 2000 || item.dataAdmissao.getFullYear() >= 2010);
-
 /*
     Output: [
         {
@@ -112,7 +108,6 @@ const admitidos = funcionarios.filter(item => item.dataAdmissao.getFullYear() >=
 
 // b.
 const demitidos = funcionarios.filter(item => item.dataDemissao.getFullYear() >= 2018);
-
 /*
     Output: [
         {
@@ -136,7 +131,6 @@ const funcionario = funcionarios.map(item => {
         desconto: item.descontos
     }
 });
-
 /*
     Output: [
         {
@@ -162,7 +156,6 @@ const totalDesconto = funcionarios.reduce(
     (accumulator, currentValue) => accumulator + currentValue.descontos,
     0
 );
-
 /* Output: 630 */
 
 // 3.
@@ -179,7 +172,6 @@ const somaHeroFunction = (a, b, c) => {
 
 soma(5, 5, 2);
 somaHeroFunction(5, 5, 2)
-
 // Output: 5
 
 //4.
@@ -188,14 +180,12 @@ document.write(`<button onclick="contarCliques(); contarCliquesHeroFunction()">C
 <div id="resultado"></div><div id="resultadoHeroFunction"></div>`)
 
 let totalCliques = 0;
-
 function contarCliques() {
   totalCliques++;
   document.getElementById("resultado").innerHTML = `Função Tradicional: O total de cliques no botão foi de ${totalCliques} vezes.`;
 }
 
 let totalCliquesHeroFunction = 0;
-
 const contarCliquesHeroFunction = () => {
   totalCliquesHeroFunction++;
   document.getElementById("resultadoHeroFunction").innerHTML = `Arrow Function: O total de cliques no botão foi de ${totalCliquesHeroFunction} vezes.`;
@@ -211,7 +201,6 @@ function media (nota1, nota2, nota3, nota4, nota5, nota6, nota7) {
 }
 
 media(10, 5, 2, 3, 4, 10, 1)
-
 // Output: Você foi reprovado
 
 // 6.
@@ -234,7 +223,6 @@ function exibeFaixaEtaria(idade) {
 }
 
 exibeFaixaEtaria(61)
-
 // Output: Idoso
 
 function imparOuPar(numero) {
@@ -243,5 +231,4 @@ function imparOuPar(numero) {
 }
 
 imparOuPar(6)
-
 // Output: O número é par
