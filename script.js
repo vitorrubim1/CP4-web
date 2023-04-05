@@ -15,14 +15,14 @@ const alunos = [
 ];
 
 const escola = {
-    curso: "ADS",
+    curso: "ANÁLISE E DESENVOLVIMENTO DE SISTEMAS",
     alunos: alunos,
     professor: "Welligton",
     turma: "1TDSPR",
     periodo: "Noite",
 }
 
-// a.
+// a. Crie um método telaaluno estudando e apresente na tela
 const alunosEstudando = escola.alunos.filter(item => item.estudando);
 
 /*
@@ -166,3 +166,82 @@ const totalDesconto = funcionarios.reduce(
 /* Output: 630 */
 
 // 3.
+
+// a.
+function soma (a, b, c) {
+    return (a + b) / c;
+}
+
+// b. apresente agora com o mesmo exemplo crie uma Arrow function para apresentar o mesmo resultado
+const somaHeroFunction = (a, b, c) => {
+    return (a + b) / c;
+}
+
+soma(5, 5, 2);
+somaHeroFunction(5, 5, 2)
+
+// Output: 5
+
+//4.
+document.write(`<h3>Total de Cliques:</h3>`)
+document.write(`<button onclick="contarCliquesTr(); contarCliquesHeroFunction()">Clique aqui!</button>
+<div id="resultado"></div><div id="resultadoHeroFunction"></div>`)
+
+let totalCliques = 0;
+
+function contarCliques() {
+  totalCliques++;
+  document.getElementById("resultado").innerHTML = `Função Tradicional: O total de cliques no botão foi de ${totalCliques} vezes.`;
+}
+
+let totalCliquesHeroFunction = 0;
+
+const contarCliquesHeroFunction = () => {
+  totalCliquesHeroFunction++;
+  document.getElementById("resultadoHeroFunction").innerHTML = `Arrow Function: O total de cliques no botão foi de ${totalCliquesHeroFunction} vezes.`;
+}
+
+// 5.
+function media (nota1, nota2, nota3, nota4, nota5, nota6, nota7) {
+    const sum = (nota1 + nota2 + nota3 + nota4 + nota5 + nota6 + nota7) / 7;
+
+    if (sum >= 6) return "Você foi aprovado"
+
+    return "Você foi reprovado"
+}
+
+media(10, 5, 2, 3, 4, 10, 1)
+
+// Output: Você foi reprovado
+
+// 6.
+function login(username, senha) {
+    if (username === "admin" && senha === "1234") return "Login realizado com sucesso!";
+    
+    return "Falha na autenticação";
+}
+
+login("admin", "1234")
+
+// Output: Login realizado com sucesso!
+
+// 7.
+function exibeFaixaEtaria(idade) {
+    if (idade <= 12) return "Criança";
+    if (idade <= 18) return "Adolescente";
+    if (idade <= 60) return "Adulto";
+    if (idade > 60) return "Idoso";
+}
+
+exibeFaixaEtaria(61)
+
+// Output: Idoso
+
+function imparOuPar(numero) {
+    if (numero % 2 === 0) return "O número é par"
+    else return "O número é impar";
+}
+
+imparOuPar(6)
+
+// Output: O número é par
